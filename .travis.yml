@@ -1,0 +1,12 @@
+language: node_js
+node_js:
+  - stable
+script:
+  - npm run build
+deploy:
+  provider: pages
+  local-dir: dist
+  skip-cleanup: true
+  github-token: $GITHUB_PAGES
+  on:
+    branch: master
